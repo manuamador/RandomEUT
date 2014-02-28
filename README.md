@@ -13,4 +13,9 @@ Packages required
 * Numpy
 * Matplotlib
 
+Output sample
+-------------
+
 ![Radiation pattern picture](http://farm3.staticflickr.com/2813/12841712403_b16cd07a66_o_d.png "Radiation pattern picture sample")
+
+
