@@ -71,8 +71,12 @@ for u in range(0,len(f)):
     x = R  * outer(cos(phi), sin(theta))
     y = R  * outer(sin(phi), sin(theta))
     z = R  * outer(ones_like(phi), cos(theta))
+    ##B&W 3D rendering    
     ax.plot_surface(x, y, z,  rstride=2, cstride=2,color='w',\
         linewidth=0.6,shade=False)
+    ##Color 3D rendering, normalized power
+    #ax.plot_surface(x, y, z, rstride=1, cstride=1, facecolors=cm.jet(R),\
+    #    linewidth=1,shade=True,antialiased=False)
     max_radius = 0.7
     print('f= %2.3f GHz, D = %2.1f' %(f[u]/1e9,D))
     title(r'$f= %2.3f$ GHz, $D = %2.1f$' %(f[u]/1e9,D),fontsize=20)
@@ -81,6 +85,6 @@ for u in range(0,len(f)):
     fname = 'f%2.3f_%2.1f' %(f[u]/1e9,D)
     print 'Saving frame', fname
     fig.savefig(fname+'.png',bbox='tight')
-    fig.savefig(fname+'.svg',bbox='tight')
+    #fig.savefig(fname+'.svg',bbox='tight')
     #fig.savefig(fname+'.pdf',bbox='tight')
     close()
