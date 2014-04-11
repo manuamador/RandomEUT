@@ -34,8 +34,9 @@ R = 100 #Measurement sphere radius in m
 
 
 
-Ethac=zeros((len(phi),len(theta),len(f))) #initialisation de $E_\theta$
-Ephac=zeros((len(phi),len(theta),len(f))) #initialisation de $E_\phi$
+Ethac=zeros((len(phi),len(theta),len(f)),complex) #$E_\theta$
+Ephac=zeros((len(phi),len(theta),len(f)),complex) #$E_\phi$
+
 
 
 n=10 #number of radiating dipoles on the EUT
@@ -59,7 +60,7 @@ Etheta,Ephi=Efarfield(R,t,p,I,f)
 Ethac=reshape(Etheta,(np,nt,len(f)))
 Ephac=reshape(Ephi,(np,nt,len(f)))
 
-P=Ethac**2+Ephac**2#+Erac**2 #power
+P=real(Ethac)**2+real(Ephac)**2 #power
 
 #Radiation diagram   
 for u in range(0,len(f)):
