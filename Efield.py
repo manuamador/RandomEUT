@@ -114,9 +114,9 @@ def Efarfield(R,theta,phi,I,f):
             *(-sintheta*costheta*cosphi)+(sb*sa)\
             *(-sintheta*costheta*sinphi)\
             +ca*(-sintheta*(-sintheta)))),(len(f),1)),axis=1)           
-        Eth[i,:]= abs(Exx*cos(theta[i])*cos(phi[i])\
+        Eth[i,:]= real(Exx*cos(theta[i])*cos(phi[i])\
             +Eyy*cos(theta[i])*sin(phi[i])-Ezz*sin(theta[i]))
-        Eph[i,:]= abs(-Exx*sin(phi[i])+Eyy*cos(phi[i]))
-        #Er[i,:] = abs(Exx*sin(theta[i])*cos(phi[i])\
+        Eph[i,:]= real(-Exx*sin(phi[i])+Eyy*cos(phi[i]))
+        #Er[i,:] = real(Exx*sin(theta[i])*cos(phi[i])\
         #   +Eyy*sin(theta[i])*sin(phi[i])+Ezz*cos(theta[i]))
-    return Eth,Eph
+    return Eth,Eph#,Er
