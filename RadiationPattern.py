@@ -59,7 +59,7 @@ Etheta,Ephi=Efarfield(R,t,p,I,f)
 Ethac=reshape(Etheta,(np,nt,len(f)))
 Ephac=reshape(Ephi,(np,nt,len(f)))
 
-P=sqrt(abs(Ethac)**2+abs(Ephac)**2)#+abs(Erac)**2) #power
+P=Ethac**2+Ephac**2#+Erac**2 #power
 
 #Radiation diagram   
 for u in range(0,len(f)):
