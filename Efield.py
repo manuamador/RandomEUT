@@ -73,9 +73,9 @@ def Efarfield(R,theta,phi,I,f):
     - f frequencies
     """
     N=len(theta)
-    Eth=zeros((N,len(f)))
-    Eph=zeros((N,len(f)))
-    #Er=zeros((N,len(f)))
+    Eth=zeros((N,len(f)),complex)
+    Eph=zeros((N,len(f)),complex)
+    #Er=zeros((N,len(f)),complex)
     for i in range(0,N): 
         X=R*cos(phi[i])*sin(theta[i])
         Y=R*sin(phi[i])*sin(theta[i])
