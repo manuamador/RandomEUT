@@ -16,7 +16,7 @@ Packages required
 Output samples
 --------------
 
-![Radiation pattern picture](http://farm3.staticflickr.com/2813/12841712403_b16cd07a66_o_d.png "Radiation pattern picture sample in b&w")
-![Radiation pattern picture](http://farm8.staticflickr.com/7424/13154026053_4e2608b9fd_o_d.png "Radiation pattern picture sample in color")
+![Radiation pattern picture](./f1.000_2.3.png "Radiation pattern picture sample in b&w")
+![Radiation pattern picture](./f1.000_2.4.png "Radiation pattern picture sample in color")
 
 
